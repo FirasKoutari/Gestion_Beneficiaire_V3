@@ -409,8 +409,11 @@ def search_beneficiaires(request):
         if prenom_enfant:
             enfant = Enfant.objects.filter(prenom__icontains=prenom_enfant)
             beneficiaires = beneficiaires.filter(enfant__in=enfant)
-        
 
-        return render(request, 'pages/search.html', {'beneficiaires': beneficiaires})
+        page_number = request.GET.get('page', 1)  # Get the page number from the query parameters
+        paginator = Paginator(beneficiaires, 2)  # Create a Paginator object with 10 items per page
+        page = paginator.get_page(page_number)
+
+        return render(request, 'pages/search.html', {'beneficiaires': page})
     else:
         return render(request, 'pages/search.html')
