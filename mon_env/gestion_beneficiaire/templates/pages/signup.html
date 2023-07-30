@@ -7,31 +7,31 @@
         <div class="col-md-6">
             <div class="card mt-5">
                 <div class="card-header">
-                    <h1 class="text-center">Sign Up</h1>
+                    <h1 class="text-center">S'inscrire</h1>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" class="form-control" placeholder="Choose a username" required>
+                            <label for="username">Nom d'utilisateur:</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Choisissez un nom d'utilisateur" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Entrer votre Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="password1">Password:</label>
-                            <input type="password" id="password1" name="password1" class="form-control" placeholder="Choose a password" required>
+                            <label for="password1">Mot de passe:</label>
+                            <input type="password" id="password1" name="password1" class="form-control" placeholder="Choisissez un mot de passe" required>
                         </div>
                         <div class="form-group">
-                            <label for="password2">Confirm Password:</label>
-                            <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm your password" required>
+                            <label for="password2">Confirmez le mot de passe:</label>
+                            <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirmer votre mot de passe" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
                     </form>
                     <div class="text-center mt-3">
-                        <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+                        <p>Vous avez déjà un compte? <a href="{% url 'login' %}">Connexion</a></p>
                     </div>
                 </div>
             </div>

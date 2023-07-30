@@ -411,7 +411,7 @@ def search_beneficiaires(request):
             beneficiaires = beneficiaires.filter(enfant__in=enfant)
 
         page_number = request.GET.get('page', 1)  # Get the page number from the query parameters
-        paginator = Paginator(beneficiaires, 2)  # Create a Paginator object with 10 items per page
+        paginator = Paginator(beneficiaires, 10)  # Create a Paginator object with 10 items per page
         page = paginator.get_page(page_number)
 
         return render(request, 'pages/search.html', {'beneficiaires': page})

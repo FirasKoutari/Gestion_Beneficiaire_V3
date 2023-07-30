@@ -3,10 +3,10 @@
 
 {% block content %}
 <div class="container">
-  <h1 class="mb-4">Beneficiary Detail</h1>
+  <h1 class="mb-4">Détail du bénéficiaire</h1>
   <div class="card">
     <div class="card-body">
-      <h2 class="card-title">Beneficiary Information</h2>
+      <h2 class="card-title">information du bénéficiaire</h2>
       <div class="row">
         <div class="col-md-6">
           <p class="card-text"><strong>CIN:</strong> {{ beneficiary.cin }}</p>
@@ -19,7 +19,7 @@
 
   <div class="card mt-4">
     <div class="card-body">
-      <h2 class="card-title">Spouse Information</h2>
+      <h2 class="card-title">Renseignements sur le conjoint</h2>
       {% if spouse %}
       <div class="row">
         <div class="col-md-6">
@@ -29,14 +29,14 @@
         </div>
       </div>
       {% else %}
-      <p class="card-text">No spouse information available.</p>
+      <p class="card-text">Aucune information disponible sur le conjoint.</p>
       {% endif %}
     </div>
   </div>
 
   <div class="card mt-4">
     <div class="card-body">
-      <h2 class="card-title">Children Information</h2>
+      <h2 class="card-title">Informations sur les enfants</h2>
       {% if children %}
       <div class="row">
         <div class="col-md-6">
@@ -47,7 +47,7 @@
         </div>
       </div>
       {% else %}
-      <p class="card-text">No children information available.</p>
+      <p class="card-text">Aucune information disponible sur les enfants.</p>
       {% endif %}
     </div>
   </div>
