@@ -1,0 +1,335 @@
+<!-- modify_bn.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mb-4"><i class="fa-solid fa-pen-to-square"></i>   Modifier un bénéficiaire</h1>
+        <form method="POST" action="{% url 'update_beneficiary' cin=beneficiary.cin %}" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <!-- Step 1: Informations sur le Beneficiaire -->
+            <div class="step" id="step1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Informations sur le Beneficiaire</h2>
+                        <div class="form-group" >
+                            <label for="cin">CIN:</label>
+                            <input type="text" name="cin" id="cin" class="form-control" required value="{{ beneficiary.cin }}" readonly>
+                            <div class="invalid-feedback">
+                                Please enter CIN.
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom:</label>
+                            <input type="text" name="nom" id="nom" class="form-control" required value="{{ beneficiary.nom }}">
+                            <div class="invalid-feedback">
+                                Please enter Nom.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" name="prenom" id="prenom" class="form-control" required value="{{ beneficiary.prenom }}">
+                            <div class="invalid-feedback">
+                                Please enter Prénom.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group mt-4">
+                    <button type="button" class="btn btn-primary next-step">Suivant</button>
+                    <button type="button" class="btn btn-secondary add-spouse">Ajouter un conjoint</button>
+                    <button type="button" class="btn btn-secondary add-child">Ajouter les enfants</button>
+                </div>
+            </div>
+
+                <!-- Step 2: Origine du beneficiaire -->
+                <div class="step" id="step2" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Origine du beneficiaire</h2>
+                            <div class="form-group">
+                                <label for="ville">Ville:</label>
+                                <select name="ville" id="ville" class="form-control" required>
+                                    
+                                    <option value="">Select Ville</option>
+                                    <option value="Settat" {% if origine.ville == 'Settat' %}selected{% endif %}>Settat</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select Ville.
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="commune">Commune:</label>
+                                <select name="commune" id="commune" class="form-control" required>
+                                    
+                                    <option value="">Select Commune</option>
+                                    <option value="commune_Settat" {% if origine.commune == 'commune_Settat' %}selected{% endif %}>commune_Settat</option>
+                                    
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select Commune.
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="douar">Douar:</label>
+                                <select name="douar" id="douar" class="form-control" required>
+                                    
+                                    <option value="">Select Douar</option>
+                                    <option value="kilaz" {% if origine.douar == 'kilaz' %}selected{% endif %}>kilaz</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select Douar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group mt-4">
+                        <button type="button" class="btn btn-secondary prev-step">Precedent</button>
+                        <button type="button" class="btn btn-primary next-step">Suivant</button>
+                    </div>
+                </div>  
+
+                    <!-- Step 3: Informations sur l'operation -->
+                    <div class="step" id="step3" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Informations sur l'operation</h2>
+                                <div class="form-group">
+                                    <label for="num_pv">Num Pv:</label>
+                                    <input type="text" name="num_pv" id="num_pv" class="form-control" required value="{{ info_operation.num_pv }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Num Pv.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="operateur">Operateur:</label>
+                                    <select name="operateur" id="operateur" class="form-control" required >
+                                        <option value="">Select Operateur</option>
+                                        <option value="Alomrane" {% if info_operation.operateur == 'Alomrane' %}selected{% endif %}>Alomrane</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select Operateur.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="nom_operation">Nom d'operation:</label>
+                                    <input type="text" name="nom_operation" id="nom_operation" class="form-control" required value="{{ info_operation.nom_operation }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Nom d'operation.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="num_ressencement">Num de ressencement:</label>
+                                    <input type="text" name="num_ressencement" id="num_ressencement" class="form-control" required value="{{ info_operation.num_ressencement }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Num de ressencement.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="date_ressencement">Date du ressencement:</label>
+                                    <input type="date" name="date_ressencement" id="date_ressencement" class="form-control" required value="{{ info_operation.date_ressencement|date:'Y-m-d' }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Date du ressencement.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="date_affectation">Date d'affectation:</label>
+                                    <input type="date" name="date_affectation" id="date_affectation" class="form-control" required value="{{ info_operation.date_affectation|date:'Y-m-d' }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Date d'affectation.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="type_intervention">Type d'intervention:</label>
+                                    <select name="type_intervention" id="type_intervention" class="form-control" required>
+                                        <option value="">Select Type d'intervention</option>
+                                        <option value="type1" {% if info_operation.type_intervention == 'type1' %}selected{% endif %}>Type 1</option>
+                                        <option value="type2" {% if info_operation.type_intervention == 'type2' %}selected{% endif %}>Type 2</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select Type d'intervention.
+                                    </div>
+                                </div>                                
+        
+                                <div class="form-group">
+                                    <label for="prix_produit">Prix de produit:</label>
+                                    <input type="number" name="prix_produit" id="prix_produit" class="form-control" required value="{{ info_operation.prix_produit }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Prix de produit.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="subvention_fshiu">La subvention FSHIU:</label>
+                                    <input type="number" name="subvention_fshiu" id="subvention_fshiu" class="form-control" required value="{{ info_operation.subvention_fshiu }}">
+                                    <div class="invalid-feedback">
+                                        Please enter La subvention FSHIU.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="date_demolition">Date démolition:</label>
+                                    <input type="date" name="date_demolition" id="date_demolition" class="form-control" required value="{{ info_operation.date_demolition|date:'Y-m-d' }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Date démolition.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="num_lot">Num de lot:</label>
+                                    <input type="text" name="num_lot" id="num_lot" class="form-control" required value="{{ info_operation.num_lot }}">
+                                    <div class="invalid-feedback">
+                                        Please enter Num de lot.
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="fichier_joint">Fichier joint (PV):</label>
+                                    <input type="file" name="fichier_joint" id="fichier_joint" class="form-control">
+                                    {% if info_operation.fichier_joint %}
+                                        <p>File selected: {{ info_operation.fichier_joint.name }}</p>
+                                    {% endif %}
+                                    <div class="invalid-feedback">
+                                        Please select a file.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="observation">Observation:</label>
+                                    <textarea name="observation" id="observation" class="form-control">{{ info_operation.observation }}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+            <div class="button-group mt-4">
+                <button type="button" class="btn btn-secondary prev-step">Precedent</button>
+                <button type="submit" class="btn btn-primary">Update Beneficiary</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript validation and form navigation
+        (function () {
+            'use strict';
+
+            // Variables for steps and buttons
+            var steps = document.querySelectorAll('.step');
+            var prevBtns = document.querySelectorAll('.prev-step');
+            var nextBtns = document.querySelectorAll('.next-step');
+            var addSpouseBtn = document.querySelector('.add-spouse');
+            var addChildBtn = document.querySelector('.add-child');
+
+            // Set current step index
+            var currentStep = 0;
+
+            // Event listeners for next buttons
+            nextBtns.forEach(function (nextBtn) {
+                nextBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    if (validateFields(steps[currentStep])) {
+                        navigateNext();
+                    }
+                });
+            });
+
+            // Event listeners for previous buttons
+            prevBtns.forEach(function (prevBtn) {
+                prevBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    navigatePrevious();
+                });
+            });
+
+            // Event listener for adding a spouse
+            addSpouseBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                showSpouseForm();
+            });
+
+            // Event listener for adding a child
+            addChildBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                showChildForm();
+            });
+
+            // Function to navigate to the next step
+            function navigateNext() {
+                if (currentStep < steps.length - 1) {
+                    steps[currentStep].style.display = 'none';
+                    currentStep++;
+                    steps[currentStep].style.display = 'block';
+                }
+            }
+
+            // Function to navigate to the previous step
+            function navigatePrevious() {
+                if (currentStep > 0) {
+                    steps[currentStep].style.display = 'none';
+                    currentStep--;
+                    steps[currentStep].style.display = 'block';
+                }
+            }
+
+            // Function to show the spouse form
+            function showSpouseForm() {
+                var spouseForm = document.createElement('div');
+                spouseForm.innerHTML = `
+                    <div class="form-group">
+                        <label for="spouse_cin">CIN:</label>
+                        <input type="text" name="spouse_cin" id="spouse_cin" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="spouse_nom">Nom:</label>
+                        <input type="text" name="spouse_nom" id="spouse_nom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="spouse_prenom">Prénom:</label>
+                        <input type="text" name="spouse_prenom" id="spouse_prenom" class="form-control">
+                    </div>
+                `;
+                steps[currentStep].appendChild(spouseForm);
+            }
+
+            // Function to show the child form
+            function showChildForm() {
+                var childForm = document.createElement('div');
+                childForm.innerHTML = `
+                    <div class="form-group">
+                        <label for="child_nom">Nom:</label>
+                        <input type="text" name="child_nom" id="child_nom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="child_prenom">Prénom:</label>
+                        <input type="text" name="child_prenom" id="child_prenom" class="form-control">
+                    </div>
+                `;
+                steps[currentStep].appendChild(childForm);
+            }
+
+            // Function to validate required fields in a step
+            function validateFields(step) {
+                var fields = step.querySelectorAll('.form-control[required]');
+                var isValid = true;
+                fields.forEach(function (field) {
+                    if (!field.value) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+                return isValid;
+            }
+        })();
+    </script>
+{% endblock %}

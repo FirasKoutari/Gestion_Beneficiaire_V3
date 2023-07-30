@@ -1,0 +1,111 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1><i class="fa-solid fa-bars-progress ml-3" ></i>   Gestion Beneficiaire</h1>
+    <a href="{% url 'add_beneficiary' %}" class="btn btn-primary mb-3 mr-3" style="float: right">Ajouter un bénéficiaire</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>CIN du beneficiaire</th>
+            <th>Nom du beneficiaire</th>
+            <th>Prénom du beneficiaire</th>
+            <th>Nom Operation</th>
+            <th>Operateur</th>  <!-- New column -->
+            <th>Date d'affectation</th>  <!-- New column -->
+            <th>N° de Ressencement</th>  <!-- New column -->
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for beneficiaire in page.object_list  %}
+            <tr>
+                <td>{{ beneficiaire.cin }}</td>
+                <td>{{ beneficiaire.nom }}</td>
+                <td>{{ beneficiaire.prenom }}</td>
+                <td>
+                    {% for info_operation in info_operations %}
+                        {% if info_operation.beneficiaire == beneficiaire %}
+                            {{ info_operation.nom_operation }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for info_operation in info_operations %}
+                        {% if info_operation.beneficiaire == beneficiaire %}
+                            {{ info_operation.operateur }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for info_operation in info_operations %}
+                        {% if info_operation.beneficiaire == beneficiaire %}
+                            {{ info_operation.date_affectation }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for info_operation in info_operations %}
+                        {% if info_operation.beneficiaire == beneficiaire %}
+                            {{ info_operation.num_ressencement }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    <div class="d-flex">
+                        {% if beneficiaire.cin %}
+                            <a href="{% url 'update_beneficiary' cin=beneficiaire.cin %}"
+                               class="btn btn-link text-primary mr-2" title="Modify">
+                                <i class="fas fa-edit"></i> 
+                            </a>
+
+                            <a href="{% url 'delete_beneficiary' cin=beneficiaire.cin %}"
+                               class="btn btn-link text-danger mr-2" title="Delete">
+                                <i class="fas fa-trash"></i> 
+                            </a>
+                            <a href="{% url 'detail_beneficiary' cin=beneficiaire.cin %}"
+                               class="btn btn-link text-info" title="Detail">
+                                <i class="fas fa-info-circle"></i> 
+                            </a>
+                        {% endif %}
+                    </div>
+
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-4 offset-md-3">
+                <p>Page: {{ page.number}}/{{ page.paginator.num_pages}}</p>
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item ">
+                        {%if page.has_previous %}
+                        <a class="page-link" href="{% url 'gestion_bn' %}?page={{page.previous_page_number }}">Previous</a>
+                        {% endif %}
+                      </li>
+                      {%for num_page in page.paginator.page_range %}
+                      <br>
+                      {%if page.number == num_page%}
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="{% url 'gestion_bn' %}?page={{ num_page }}">{{ num_page }} </a>
+                      </li>
+                      {% endif %}
+                      <br>
+                      {% endfor %}
+                      <li class="page-item">
+                        {%if page.has_next %}
+                        <a class="page-link" href="{% url 'gestion_bn' %}?page={{ page.next_page_number }}">Next</a>
+                        {% endif %}
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

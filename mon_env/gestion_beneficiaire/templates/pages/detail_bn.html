@@ -1,0 +1,90 @@
+<!-- detail_bn.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1 class="mb-4">Beneficiary Detail</h1>
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Beneficiary Information</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text"><strong>CIN:</strong> {{ beneficiary.cin }}</p>
+          <p class="card-text"><strong>Nom:</strong> {{ beneficiary.nom }}</p>
+          <p class="card-text"><strong>Prénom:</strong> {{ beneficiary.prenom }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Spouse Information</h2>
+      {% if spouse %}
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text"><strong>CIN:</strong> {{ spouse.cin }}</p>
+          <p class="card-text"><strong>Nom:</strong> {{ spouse.nom }}</p>
+          <p class="card-text"><strong>Prénom:</strong> {{ spouse.prenom }}</p>
+        </div>
+      </div>
+      {% else %}
+      <p class="card-text">No spouse information available.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Children Information</h2>
+      {% if children %}
+      <div class="row">
+        <div class="col-md-6">
+          {% for child in children %}
+          <p class="card-text"><strong>Nom:</strong> {{ child.nom }}</p>
+          <p class="card-text"><strong>Prénom:</strong> {{ child.prenom }}</p>
+          {% endfor %}
+        </div>
+      </div>
+      {% else %}
+      <p class="card-text">No children information available.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Origine du Beneficiaire</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text"><strong>Ville:</strong> {{ origine_beneficiaire.ville }}</p>
+          <p class="card-text"><strong>Commune:</strong> {{ origine_beneficiaire.commune }}</p>
+          <p class="card-text"><strong>Douar:</strong> {{ origine_beneficiaire.douar }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Information Operation</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text"><strong>Num Pv:</strong> {{ information_operation.num_pv }}</p>
+          <p class="card-text"><strong>Operateur:</strong> {{ information_operation.operateur }}</p>
+          <p class="card-text"><strong>Nom d'operation:</strong> {{ information_operation.nom_operation }}</p>
+          <p class="card-text"><strong>Num de ressencement:</strong> {{ information_operation.num_ressencement }}</p>
+          <p class="card-text"><strong>Date du ressencement:</strong> {{ information_operation.date_ressencement }}</p>
+          <p class="card-text"><strong>Date d'affectation:</strong> {{ information_operation.date_affectation }}</p>
+          <p class="card-text"><strong>Type d'intervention:</strong> {{ information_operation.type_intervention }}</p>
+          <p class="card-text"><strong>Prix de produit:</strong> {{ information_operation.prix_produit }}</p>
+          <p class="card-text"><strong>La subvention FSHIU:</strong> {{ information_operation.subvention_fshiu }}</p>
+          <p class="card-text"><strong>Date démolition:</strong> {{ information_operation.date_demolition }}</p>
+          <p class="card-text"><strong>Num de lot:</strong> {{ information_operation.num_lot }}</p>
+          <p class="card-text"><strong>Observation:</strong> {{ information_operation.observation }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
