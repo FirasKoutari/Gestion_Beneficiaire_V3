@@ -95,6 +95,10 @@
                       <li class="page-item active" aria-current="page">
                         <a class="page-link" href="{% url 'gestion_bn' %}?page={{ num_page }}">{{ num_page }} </a>
                       </li>
+                      {% else %}
+                      <li class="page-item " aria-current="page">
+                        <a class="page-link" href="{% url 'gestion_bn' %}?page={{ num_page }}">{{ num_page }} </a>
+                      </li>
                       {% endif %}
                       <br>
                       {% endfor %}
