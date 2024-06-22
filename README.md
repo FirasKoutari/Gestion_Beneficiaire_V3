@@ -1,123 +1,83 @@
-#Rapport de Stage : Développement d'une Application de Gestion des Bénéficiaires
-École : École Marocaine des Sciences de l’Ingénieur (EMSI)
-Département : Informatique
-Option : Informatique et Réseaux
-Présenté par : Firas Koutari
-Encadré par : Mhammed Ben Said (Chef de Service) et Pr. Mbida Mohamed (Encadrant Pédagogique)
-Année académique : 2022/2023
+# Gestion des Bénéficiaires
 
-Table des Matières
-Remerciements
-Introduction Générale
-Partie Théorique
-Introduction
-Description
-Préparation des environnements
-Logigramme Généralisé
-Diagramme de cas d’utilisation
-Diagramme de classe
-Diagramme de séquence
-Conclusion
-Partie Pratique
-Introduction
-Contexte de l’application
-Démonstration de l’application
-Conclusion
-Annexes
-Extraits de Codes
-Captures d’écran
-Webographie
-Remerciements
-Je tiens à exprimer ma profonde gratitude à toutes les personnes qui ont contribué à la réussite de ce stage au sein de la Direction Provinciale de l'Habitat et de la Politique de la Ville de Settat. Un remerciement spécial à Monsieur Mhammed Ben Said pour cette opportunité unique et à Monsieur Mohamed Mbida pour ses conseils précieux tout au long de cette période. Je remercie également ma famille et mes amis pour leur soutien indéfectible.
+## Introduction
 
-Introduction Générale
-Le stage en milieu professionnel est une étape cruciale dans le parcours académique, offrant l'opportunité de mettre en pratique les connaissances acquises. Du 3 juillet 2023 au 31 juillet 2023, j'ai effectué un stage au sein de la Direction Provinciale de l'Habitat et de la Politique de la Ville de Settat, axé sur le développement d'une application web pour la gestion des bénéficiaires.
+Ce projet a été réalisé dans le cadre d'un stage à la Direction Provinciale de l'Habitat et de la Politique de la Ville de Settat. L'objectif principal était de développer une application web pour la gestion des bénéficiaires des projets d'habitat et de politique de la ville.
 
-Partie Théorique
-Introduction
-La gestion des bénéficiaires est essentielle pour assurer le succès des projets d'habitat et de politique de la ville. Cette gestion couvre la collecte, la mise à jour et la gestion des informations des bénéficiaires, permettant une distribution équitable des avantages.
+## Table des Matières
 
-Description
-L'application développée est une plateforme intuitive pour gérer les informations des bénéficiaires, offrant des fonctionnalités telles que l'inscription des utilisateurs, une connexion sécurisée et la mise à jour des données.
+- [Introduction](#introduction)
+- [Description](#description)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Préparation des Environnements](#préparation-des-environnements)
+- [Diagrammes](#diagrammes)
+  - [Logigramme](#logigramme)
+  - [Diagramme de Cas d'Utilisation](#diagramme-de-cas-dutilisation)
+  - [Diagramme de Classe](#diagramme-de-classe)
+  - [Diagramme de Séquence](#diagramme-de-séquence)
+- [Fonctionnalités de l'Application](#fonctionnalités-de-lapplication)
+- [Captures d'Écran](#captures-décran)
+- [Conclusion](#conclusion)
 
-Préparation des environnements
-Pour garantir une expérience de développement fluide, nous avons utilisé Django, HTML, CSS et JavaScript, en créant des environnements virtuels dédiés pour gérer les dépendances. Des tests rigoureux ont été effectués pour assurer la qualité de l'application.
+## Description
 
-Logigramme Généralisé
-(Figure 1 : Logigramme)
+Cette application a été conçue pour fournir une plateforme intuitive et exhaustive afin de rationaliser et optimiser la gestion des informations des bénéficiaires. Elle couvre des fonctionnalités essentielles comme l'inscription des utilisateurs, la connexion sécurisée, et la gestion efficace des données des bénéficiaires.
 
-Diagramme de cas d’utilisation
-(Figure 2 : Diagramme de cas d’utilisation)
+## Technologies Utilisées
 
-Diagramme de classe
-(Figure 3 : Diagramme de classe)
+- Django
+- HTML
+- CSS
+- JavaScript
 
-Diagramme de séquence
-Inscription
-(Figure 4 : Diagramme de séquence sur l’inscription)
+## Préparation des Environnements
 
-Gestion des bénéficiaires
-(Figure 5 : Diagramme de séquence gestion bénéficiaires)
+Pour assurer une expérience de développement fluide et sécurisée, des environnements virtuels dédiés ont été créés, permettant une gestion harmonieuse des bibliothèques et des modules requis pour le bon fonctionnement de l'application.
 
-Exporter en Excel
-(Figure 6 : Diagramme de séquence Exporter en Excel)
+## Diagrammes
 
-Conclusion
-La gestion efficace des bénéficiaires est cruciale pour le succès des projets d'habitat et de politique de la ville. L'application développée offre une plateforme efficace pour gérer ces informations, contribuant à l'optimisation des projets.
+### Logigramme
 
-Partie Pratique
-Introduction
-Cette section se concentre sur la mise en œuvre pratique de l'application, en présentant ses fonctionnalités clés à travers des captures d'écran et des explications détaillées.
+![Logigramme](path/to/logigramme.png)
 
-Contexte de l’application
-L'application a été développée pour simplifier le suivi des bénéficiaires des projets d'habitat et de politique de la ville, en centralisant les informations et en optimisant leur gestion.
+### Diagramme de Cas d'Utilisation
 
-Démonstration de l’application
-Page d'Accueil
-L'utilisateur voit
-une interface conviviale avec des options de navigation claires.
+![Diagramme de Cas d'Utilisation](path/to/usecase.png)
 
-Inscription
-Les nouveaux utilisateurs peuvent s'inscrire en fournissant des informations de base, qui sont ensuite vérifiées pour éviter les doublons.
+### Diagramme de Classe
 
-Connexion
-Un système de connexion sécurisé permet aux utilisateurs de se connecter à leur compte pour accéder aux fonctionnalités de l'application.
+![Diagramme de Classe](path/to/classdiagram.png)
 
-Tableau de Bord
-Une vue d'ensemble des informations clés, y compris le nombre de bénéficiaires et les projets en cours.
+### Diagramme de Séquence
 
-Gestion des Bénéficiaires
-Les utilisateurs peuvent ajouter, modifier, supprimer et consulter les informations des bénéficiaires. Un système de recherche et de filtres avancés est également disponible pour faciliter l'accès rapide aux informations.
+#### Inscription
 
-Exportation des Données
-Les utilisateurs peuvent exporter les données des bénéficiaires en format Excel pour une utilisation hors ligne ou pour des rapports.
+![Diagramme de Séquence Inscription](path/to/sequence_inscription.png)
 
-Conclusion
-L'application développée a permis d'optimiser la gestion des bénéficiaires au sein de la Direction Provinciale de l'Habitat et de la Politique de la Ville de Settat. Elle a facilité la centralisation des informations et amélioré l'efficacité des processus administratifs.
+#### Gestion des Bénéficiaires
 
-Annexes
-Extraits de Codes
-python
-Copy code
-# Exemple de code pour la gestion des bénéficiaires
-from django.db import models
+![Diagramme de Séquence Gestion des Bénéficiaires](path/to/sequence_gestion.png)
 
-class Beneficiary(models.Model):
-    name = models.CharField(max_length=100)
-    address = models.CharField(max_length=255)
-    phone = models.CharField(max_length=15)
-    email = models.EmailField()
+#### Exporter en Excel
 
-    def __str__(self):
-        return self.name
-Captures d’écran
-Page d'Accueil : (Capture 1)
-Inscription : (Capture 2)
-Connexion : (Capture 3)
-Tableau de Bord : (Capture 4)
-Gestion des Bénéficiaires : (Capture 5)
-Exportation des Données : (Capture 6)
-Webographie
-Documentation Django : https://docs.djangoproject.com/
-Tutoriels HTML et CSS : https://www.w3schools.com/
-Références JavaScript : https://developer.mozilla.org/en-US/docs/Web/JavaScript
+![Diagramme de Séquence Exporter en Excel](path/to/sequence_export.png)
+
+## Fonctionnalités de l'Application
+
+- **Page d'Accueil**: Vue d'ensemble des fonctionnalités disponibles.
+- **Inscription d'un Utilisateur**: Formulaire de création de compte.
+- **Connexion à l'Application**: Page de connexion pour les utilisateurs enregistrés.
+- **Gestion des Bénéficiaires**: Ajouter, rechercher et afficher des bénéficiaires.
+- **Exportation en Excel**: Exporter les données des bénéficiaires au format Excel.
+
+## Captures d'Écran
+
+![Page d'Accueil](path/to/homepage.png)
+![Page d'Inscription](path/to/registration.png)
+![Page de Connexion](path/to/login.png)
+![Gestion des Bénéficiaires](path/to/beneficiary_management.png)
+![Exportation en Excel](path/to/export_excel.png)
+
+## Conclusion
+
+Ce projet a permis de développer une application web robuste et conviviale pour la gestion des bénéficiaires. En intégrant cette gestion dans la planification, l'exécution et le suivi des projets, il devient possible de maximiser les avantages pour les bénéficiaires, d'assurer la durabilité des initiatives et de contribuer à l'amélioration globale des conditions de vie au sein des communautés ciblées.
