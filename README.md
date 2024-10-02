@@ -2,7 +2,9 @@
 
 ## Introduction Générale
 
-Le stage en milieu professionnel représente une étape cruciale dans le parcours académique des étudiants, offrant l'opportunité de mettre en pratique les connaissances acquises en classe au sein d'un environnement réel. [...]
+L'agent de saisie est chargé de la gestion des bénéficiaires d'une province dont 
+l'ajout des nouveaux bénéficiaires, la recherche et le contrôle des 
+bénéficiaires.
 
 ---
 
