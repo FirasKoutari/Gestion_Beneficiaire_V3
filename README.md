@@ -1,57 +1,5 @@
 # Gestion des Bénéficiaires
 
-# Rapport de Stage
-
-**GESTION BÉNÉFICIAIRES**
-
-Présenté par :  
-**Firas Koutari**
-
-Département : Informatique  
-Option : Informatique et Réseaux  
-
-Encadré par :  
-Ch. de Serv. Mhammed Ben Said  
-Pr. Mbida Mohamed  
-
-Année : 2022/2023
-
----
-
-## Table des Matières
-
-- [Remerciements](#remerciements)
-- [Introduction Générale](#introduction-générale)
-- [Partie Théorique](#partie-théorique)
-  - [Introduction](#introduction)
-  - [Description](#description)
-  - [Préparation des environnements](#préparation-des-environnements)
-  - [Logigramme généralisé](#logigramme-généralisé)
-  - [Diagramme de cas d’utilisation](#diagramme-de-cas-dutilisation)
-  - [Diagramme de classe](#diagramme-de-classe)
-  - [Diagramme de séquence](#diagramme-de-séquence)
-  - [Conclusion](#conclusion)
-- [Partie Pratique](#partie-pratique)
-  - [Introduction](#introduction-1)
-  - [Contexte de l’application](#contexte-de-lapplication)
-  - [Démonstration de l’application](#démonstration-de-lapplication)
-  - [Conclusion](#conclusion-1)
-- [Conclusion Générale](#conclusion-générale)
-- [Annexes](#annexes)
-  - [Extraits du Code](#extraits-du-code)
-  - [Captures d’Écran](#captures-décran)
-- [Webographie](#webographie)
-
----
-
-## Remerciements
-
-Au terme de cette expérience enrichissante, une profonde gratitude est exprimée envers toutes les personnes ayant contribué à la réussite du stage au sein de la Direction Provinciale de l'Habitat et de la Politique de la Ville de Settat.
-
-Les remerciements les plus sincères sont adressés à Monsieur Mhammed Ben Said, Chef de Service, pour avoir offert une opportunité exceptionnelle de réalisation du stage au sein de son équipe. [...]
-
----
-
 ## Introduction Générale
 
 Le stage en milieu professionnel représente une étape cruciale dans le parcours académique des étudiants, offrant l'opportunité de mettre en pratique les connaissances acquises en classe au sein d'un environnement réel. [...]
