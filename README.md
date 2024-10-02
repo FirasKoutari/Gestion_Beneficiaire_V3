@@ -56,12 +56,15 @@ La création d’un bénéficiaire passe par trois étapes successives :
 3- Informations sur l'opération
 
 Pour créer un bénéficiaire, Cliquez sur le bouton: ajouter un bénéficiaire.
+
 Dans le menu, cliquez sur "Gestion de bénéficiaire", une liste des bénéficiaires 
 ajoutées sous forme d'une table s'affichera. Afin de modifier un bénéficiaire 
 cliquez sur le bouton action, un menu déroulant s'affichera, puis cliquez sur 
 modifier.
+
 Pour supprimer un bénéficiaire, Cliquez sur le bouton action, puis sur 
 supprimer. 
+
 Pour consulter le détail d'un bénéficiaire, cliquez sur le bouton action puis sur 
 détail. Une nouvelle fenêtre apparaît sur laquelle s'affiche le détail complet du
 bénéficiaire.
