@@ -5,6 +5,7 @@
 L'agent de saisie est chargé de la gestion des bénéficiaires d'une province dont 
 l'ajout des nouveaux bénéficiaires, la recherche et le contrôle des 
 bénéficiaires.
+![1i2mzupx](https://github.com/user-attachments/assets/1ab1fc00-08e2-4332-8242-cecf32c9f1ca)
 
 ---
 
