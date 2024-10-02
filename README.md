@@ -40,15 +40,21 @@ L'agent de saisie est chargé de la gestion des bénéficiaires d'une province d
 ### Authentification
 Pour vous connecter, rendez-vous sur le site localhost/gb , Ci-dessous une 
 capture d’écran représentant la page d’authentification de l'application:
+
 ![image](https://github.com/user-attachments/assets/e5ccbbb0-5dd6-4c5b-88f9-f96261e037fa)
 ![image](https://github.com/user-attachments/assets/3ec4bec6-0f91-43ef-ac7d-ac9f4a84a930)
+
 Il ne vous reste plus qu'à saisir les codes de connexion (Identifiant et mot de passe). Ces derniers vous sont délivrés par votre administrateur. Une fois identifié, vous arriverez sur la page gestion des bénéficiaires.
 
 ### Création d'un nouveau bénéficiaire
 La création d’un bénéficiaire passe par trois étapes successives :
+
 1- Informations sur le bénéficiaires
+
 2- L'origine du bénéficiaire
+
 3- Informations sur l'opération
+
 Pour créer un bénéficiaire, Cliquez sur le bouton: ajouter un bénéficiaire.
 Dans le menu, cliquez sur "Gestion de bénéficiaire", une liste des bénéficiaires 
 ajoutées sous forme d'une table s'affichera. Afin de modifier un bénéficiaire 
@@ -59,17 +65,20 @@ supprimer.
 Pour consulter le détail d'un bénéficiaire, cliquez sur le bouton action puis sur 
 détail. Une nouvelle fenêtre apparaît sur laquelle s'affiche le détail complet du
 bénéficiaire.
+
 ![image](https://github.com/user-attachments/assets/005a141c-6e85-47bc-af91-ef7c80b579d6)
 
 ### Contrôle des bénéficiaires
 Cette page a comme but de rechercher et détecter si une personne a déjà été 
 bénéficier ou non. Cette fonctionnalité donne la possibilité de rechercher par 
 un groupe des personnes.
+
 ![image](https://github.com/user-attachments/assets/6883d3ab-83d0-48dd-8e00-811de1c3922d)
 
 ### Exportation en Excel
 
 L'application offre la possibilité d'exporter les données des bénéficiaires et des opérations au format Excel. Cette fonctionnalité permet aux utilisateurs d'analyser les données hors ligne et de générer des rapports pour des besoins spécifiques.
+
 ![image](https://github.com/user-attachments/assets/7be92d3c-80cd-447f-9de3-73459ac070e2)
 
 ## Annexes
